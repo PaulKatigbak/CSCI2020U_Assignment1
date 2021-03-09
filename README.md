@@ -4,17 +4,17 @@
 
 This assignment tasks us to implement a Spam Detector/Filter. The following implementation is done by using the source materials and various references.
 
-##Project Information:
+## Project Information:
 
 This project implents a Bayesiam Interface based on Baye's Theorem. The user will provide a directory path containing the train and test folders and the program will read and analyze all the files in accordance with the spam and ham algorithm.
 
-##Improvements:
-####Graphical User Interface:
+## Improvements:
+#### Graphical User Interface:
 Visual improvements are done to the basic application window. Some background colors are added to bring some personality to the application.
 
 Interface has been improved by adding buttons to specify whether the user want to "train" or "test" the chosen directory.
 
-##How-to Run:
+## How-to Run:
 1. Copy the repository link and clone the repo to your local machine.
 2. Open IntelliJ IDE, Eclipse, or any ide that supports JavaFX.
 3. Open the repo project.
@@ -26,12 +26,12 @@ Interface has been improved by adding buttons to specify whether the user want t
 9. After training, choose the "test" button, and select the directory containing the test files.
 10. The application will then show the accuracy, precision, and all other data to the user.
 
-####Note:
+#### Note:
 
 The application is hard-coded to search for a specific directory structure and name.
  "train" directory must have its subdirectories named "ham","ham2", and "spam". "test" directory must have its subdirectories named "ham" and "spam".
 
-##References:
+## References:
 
 StackOverflow
 
