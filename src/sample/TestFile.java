@@ -1,0 +1,45 @@
+package sample;
+
+
+import java.text.DecimalFormat;
+
+public class TestFile {
+    private String filename;
+    private String spamProbability;
+    private String actualClass;
+
+    public TestFile(String filename, String spamProbability, String actualClass) {
+        this.filename = filename;
+        this.spamProbability = spamProbability;
+        this.actualClass = actualClass;
+    }
+
+    public String getFilename() {
+        return this.filename;
+    }
+
+    public void setFilename(String value) {
+        this.filename = value;
+    }
+
+    public String getSpamProbability() {
+        return this.spamProbability;
+    }
+
+    public void setSpamProbability(String val) {
+        this.spamProbability = val;
+    }
+
+    public String getSpamProbRounded() {
+        DecimalFormat df = new DecimalFormat("0.00000");
+        return df.format(this.spamProbability);
+    }
+
+    public String getActualClass() {
+        return this.actualClass;
+    }
+
+    public void setActualClass(String value) {
+        this.actualClass = value;
+    }
+}

@@ -1,0 +1,46 @@
+.anchorPane{
+    -fx-background-color: beige;
+}
+.gridPane{
+    -fx-background-color: aliceblue;
+}
+.label{
+    -fx-text-fill:black;
+}
+.textField{
+    -fx-text-fill: blue;
+}
+.name{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.button {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+}
+.probabilityCol {
+    -fx-text-fill: darkred;
+    -fx-background-color: white;
+}
+
+.fileCol{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+}
+.actualClassCol{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+}
+.tableView{
+    -fx-base: #1d1d1d;
+    -fx-table-cell-border-color: cyan;
+    -fx-table-header-border-color: magenta;
+    -fx-background-color: white;
+}
+.accuracyText{
+-fx-text-fill: black;
+}
+.precisionText{
+-fx-text-fill: black;
+}
