@@ -25,13 +25,7 @@ public class Controller {
     private final TreeMap<String, Integer> SpamWordCount = new TreeMap<String, Integer>();
     private final TreeMap<String, Double> SpamWord = new TreeMap<String, Double>();
 
-    //Following placeholder variables
-    double numTruePositives = 0;
-    double numFalsePositives = 0;
-    double numTrueNegatives = 0;
-    double accuracy;
-    double precision;
-    double numTestFiles;
+
 
     //The following @fxml variables are to initialize the GUI
     @FXML
@@ -159,6 +153,14 @@ public class Controller {
         }
     }
 
+    //Variables for getting accuracy and precision
+    public double numTruePositives = 0;
+    public double numFalsePositives = 0;
+    public double numTrueNegatives = 0;
+    public double accuracy;
+    public double precision;
+    public double numTestFiles;
+
     //Pr(S|F)
     public double testProb(File file) throws FileNotFoundException {
         double probSpamFreq;
@@ -178,18 +180,18 @@ public class Controller {
 
         //Gets accuracy and precision
         if (file.getParent().contains("spam") && probSpamFreq > cap) {
-            numTruePositives ++;
-            numTrueNegatives ++;
+            this.numTruePositives ++;
+
         }
 
         if (file.getParent().contains("ham") && probSpamFreq > cap) {
-            numFalsePositives ++;
+            this.numFalsePositives ++;
         }
 
         if (file.getParent().contains("ham") && probSpamFreq < cap) {
-            numTrueNegatives ++;
+            this.numTrueNegatives ++;
         }
-        numTestFiles ++;
+        this.numTestFiles ++;
         return probSpamFreq;
     }
 
@@ -267,7 +269,9 @@ public class Controller {
             testPath.setText(path);
             processTest(mainDirectory);
             System.out.println("Number of files: "+numTestFiles);
-            System.out.println(numTruePositives + " " + numFalsePositives + " " + numTrueNegatives);
+            System.out.println("Number of TruePositives: "+numTruePositives);
+            System.out.println("Number of FalsePositives: "+numFalsePositives);
+            System.out.println("Number of TrueNegatives: "+numTrueNegatives);
 
             // calculate and format accuracy and precision
             DecimalFormat df = new DecimalFormat("0.00000");
@@ -287,6 +291,7 @@ public class Controller {
     }
 
     public void processTest(File file) {
+
 
         if (file.isDirectory()) {
 
@@ -309,7 +314,7 @@ public class Controller {
 
             if (file.getParent().contains("ham")) {
                 tableview.getItems().add(new TestFile(file.getName(), df.format(spamProbability), "Ham"));
-            } else {
+            } else if (file.getParent().contains("spam")) {
                 tableview.getItems().add(new TestFile(file.getName(), df.format(spamProbability), "Spam"));
             }
         }
