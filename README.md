@@ -1,4 +1,6 @@
 # CSCI2020U_Assignment1
+![image](https://user-images.githubusercontent.com/60145395/110403470-5b1cba80-803a-11eb-900a-37a3cfd083a5.png)
+
 
 This assignment tasks us to implement a Spam Detector/Filter. The following implementation is done by using the source materials and various references.
 
