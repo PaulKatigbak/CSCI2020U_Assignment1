@@ -25,10 +25,12 @@ Interface has been improved by adding buttons to specify whether the user want t
 10. The application will then show the accuracy, precision, and all other data to the user.
 
 ####Note:
+
 The application is hard-coded to search for a specific directory structure and name.
  "train" directory must have its subdirectories named "ham","ham2", and "spam". "test" directory must have its subdirectories named "ham" and "spam".
 
 ##References:
+
 StackOverflow
 
 Lecture Modules and Examples
